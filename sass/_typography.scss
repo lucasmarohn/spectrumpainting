@@ -1,0 +1,181 @@
+@import "variables.scss";
+
+.button {
+	padding: 10px;
+	border: 2px solid;
+	font-family: "archivoNarrow","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	text-decoration: none;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 10px;
+	text-shadow: 3px 3px 5px rgba(0,0,0,.3);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+	        box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+	-webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+	@media screen and (min-width: $bp2) {
+		padding: 20px;
+	}
+	&.primary {
+		background: $primaryc;
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.3),
+					inset 0px 5px 0px rgba(255,255,255,.3);
+		        box-shadow: 3px 3px 5px rgba(0,0,0,.3),
+					inset 0px 5px 0px rgba(255,255,255,.3);
+    border-color: $primaryc;
+    &:hover {
+      border-color: darken($primaryc, 10%);
+      background: darken($primaryc, 10%);
+    }
+	}
+
+	&.secondary {
+		background: $tetc;
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.3),
+					inset 0px 5px 0px rgba(255,255,255,.3);
+		        box-shadow: 3px 3px 5px rgba(0,0,0,.3),
+					inset 0px 5px 0px rgba(255,255,255,.3);
+    border-color: $tetc;
+    &:hover {
+      background: darken($tetc, 10%);
+      border-color: darken($tetc, 10%);
+    }
+  }
+  &.transparent {
+    &:hover {
+      background: #FFFFFF;
+      color: $secondaryc;
+      border-color: #FFFFFF;
+      text-shadow: none;
+    }
+  }
+	&.big {
+		font-size: 1.3em;
+	}
+}
+
+@mixin navActive($fill, $border) {
+	background: $fill;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.15);
+	@media screen and (min-width: $bp2) {
+		border-bottom: 5px solid $border;
+	}
+}
+
+body.home .navigation a.home {
+	@include navActive(#a63293, #8d2b7d);
+}
+body.portfolio .navigation a.portfolio {
+	@include navActive(#0074c3, #005d9c);
+}
+body.services .navigation a.services {
+	@include navActive(#80e384, #54bf58);
+}
+body.about .navigation a.about {
+	@include navActive(#ffbc10, #d99f0d);
+}
+body.contact .navigation a.contact {
+	@include navActive(#ce304a, #a6263b);
+}
+
+.navigation a.home {
+	border-bottom: 5px solid #a63293;
+	&:hover {
+		@include navActive(#a63293, #8d2b7d);
+	}
+}
+.navigation a.portfolio {
+	border-bottom: 5px solid #0074c3;
+	&:hover{
+		@include navActive(#0074c3, #005d9c);
+	}
+}
+.navigation a.services {
+	border-bottom: 5px solid #80e384;
+	&:hover {
+		@include navActive(#80e384, #54bf58);
+	}
+}
+.navigation a.about {
+	border-bottom: 5px solid #ffbc10;
+	&:hover{
+		@include navActive(#ffbc10, #d99f0d);
+	}
+}
+.navigation a.contact {
+	border-bottom: 5px solid #ce304a;
+	&:hover{
+		@include navActive(#ce304a, #a6263b);
+	}
+}
+
+.t-white {
+	color: white;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-family: "archivoNarrow","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	line-height: 1.3em;
+	color: $secondaryclight;
+	margin: 0px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	@media screen and (min-width: $bp2) {
+		font-size: 1.8em;
+	}
+}
+
+h2 {
+	font-size: 1.3em;
+	font-family: "archivoNarrow","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	line-height: 1.3em;
+	color: $textc;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-family: "archivoNarrow","SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	line-height: 1.3em;
+	color: $primaryc;
+	margin-bottom: 20px;
+}
+
+.page-title {
+	@media screen and (min-width: $bp2) {
+		margin-bottom: 30px;
+	}
+}
+
+p {
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+section {
+	img {
+		border: 1px solid #dbdbdb;
+		border-radius: 5px;
+		padding: 10px;
+		-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.15),
+					inset 0px 0px 10px rgba(255,255,255,1);
+		        box-shadow: 3px 3px 5px rgba(0,0,0,.15),
+					inset 0px 0px 10px rgba(255,255,255,1);
+	}
+}
+
+p.footer-meta {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	margin: 2rem 0;
+	color: darken(#d0d3bc, 50%);
+	a {
+		color: darken(#d0d3bc, 60%);
+		&:hover {
+			color: darken(#d0d3bc, 50%);
+			text-decoration: none;
+		}
+	}
+}

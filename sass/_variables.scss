@@ -1,0 +1,31 @@
+$primaryc: #a42b0f;
+$primaryclight: #ad4127;
+$secondaryc: #0e4199;
+$secondaryclight: #244b95;
+$tetc: #558134;
+$white: #eef0f2;
+$medgrey: #5f6167;
+$lightgrey: #afafaf;
+$textc: #202427;
+
+$bp1: 600px;
+$bp2: 980px;
+$bp3: 1160px;
+
+@font-face {
+  font-family: 'archivoNarrow';
+  src: url('../fonts/archivonarrow-bold-webfont.woff2') format('woff2'),
+       url('../fonts/archivonarrow-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'archivoNarrow';
+  src: url('../fonts/archivonarrow-medium-webfont.woff2') format('woff2'),
+       url('../fonts/archivonarrow-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
